@@ -38,7 +38,8 @@ class TestDBStorageDocs(unittest.TestCase):
                          "Found code style errors (and warnings).")
 
     def test_pep8_conformance_test_db_storage(self):
-        """Test tests/test_models/test_engine/ test_db_storage.py conforms to PEP8."""
+        """Test tests/test_models/test_engine/ test_db_storage.py conforms to 
+        PEP8."""
         pep8s = pep8.StyleGuide(quiet=True)
         result = pep8s.check_files(['tests/test_models/test_engine/\
 test_db_storage.py'])
@@ -62,6 +63,6 @@ test_db_storage.py'])
         self.assertTrue(hasattr(DBStorage, 'count'),
                         "DBStorage class doesn't have 'count' method")
 
+
 if __name__ == '__main__':
     unittest.main()
-

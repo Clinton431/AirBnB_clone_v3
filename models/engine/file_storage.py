@@ -14,7 +14,7 @@ from models.state import State
 from models.user import User
 
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
-"Place": Place, "Review": Review, "State": State, "User": User}
+           "Place": Place, "Review": Review, "State": State, "User": User}
 
 
 class FileStorage:
@@ -57,7 +57,7 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
-        except:
+        except Exception:
             pass
 
     def delete(self, obj=None):
